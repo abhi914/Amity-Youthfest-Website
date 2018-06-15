@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+	h2{
+	text-align: center;
+}
+	.container {
+	width: 600px;
+	background-color: #E9EBEE;
+	border-radius: 8px;
+	padding-bottom: 10px;
+	margin-top: 8px;
+	border: 1px solid #aaaeb5 ;
+}
+   body{
+   	background-color: #c9cdd3;
+   	}
+	#button {
+		text-align: center;
+
+	}
+	.btn {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+	<h2> Register With Accomodation </h2> <br/><br/>
+	<form name="myForm" action="register2.php" method="post">
+	  <div class="form-group">
+	    <label for="name">Name</label>
+	    <input type="text" class="form-control" name="name" placeholder="Enter Full Name" required>
+	  </div>
+	  <div class="form-group">
+	    <label for="email">E-mail</label>
+	    <input type="email" class="form-control" name="email" placeholder="Enter E-mail" required>
+	  </div>
+                    <div class="form-group">
+	    <label for="class">Aadhaar No.</label>
+	    <input type="text" class="form-control" name="Aadhaar" placeholder="Enter your Aadhaar No." required>
+	  </div>
+	   <div class="form-group">
+	     <label for="college">University/College/School </label>
+	     <input type="text" class="form-control" name="college" placeholder="Enter your college/school name" required>
+	  </div>
+                   <div class="form-group">
+ 	     <label for="mobile">Mobile Number 1</label>
+        <input onblur="checklength(this)" type="number" class="form-control" name="phone1" placeholder="Enter Mobile Number 1" required maxlength="10">
+	  </div>
+                   <div class="form-group">
+ 	     <label for="mobile">Mobile Number 2</label>
+         <input onblur="checklength(this)" type="number" class="form-control" name="phone2" placeholder="Enter Mobile Number 2" maxlength="10">
+	  </div>
+	  
+                   
+	  <div class="form-group">
+	     <label for="payment-method">Choose Payment Method</label> &nbsp;&nbsp;&nbsp;
+	    <label class="radio-inline">
+	    <input type="radio" name="paymentmethod" value="offline" checked> Pay by Paytm </input></label>
+	    <label class="radio-inline">
+	    <input type="radio" name="paymentmethod" value="online"> Pay by Other Methods </input></label>
+	  </div>
+	  
+	  <div id="button"><button type="submit" class="btn btn-primary" name="submit">Submit</button></div>
+	</form>
+    </div>
+<script>
+
+document.getElementById("btn1").onclick = function(){clickAlert()};
+function clickAlert(){
+var event = document.getElementById("events");
+var eventValue = event.options[event.selectedIndex].value;
+if("zumba"==eventValue||"theater"==eventValue||"self"==eventValue||"crimerun"==eventValue||"nukkadnatak"==eventValue||"paperandposter"==eventValue||"seriesquiz"==eventValue||"pehchaan"==eventValue||"anant"==eventValue||"treasurehunt"==eventValue||"englishdebate"==eventValue||"code"==eventValue||"nfs"==eventValue||"fifa"==eventValue||"counterstrike"==eventValue||"pool"==eventValue||"nfs"==eventValue||"solodance"==eventValue||"streetdance"==eventValue||"solosinging"==eventValue||"dualsinging"==eventValue||"rapping"==eventValue||"radiojockey"==eventValue||"musicmania"==eventValue||"admadshow"==eventValue||"photography"==eventValue||"selfi"==eventValue||"storytelling"==eventValue||"collagemaking"==eventValue||"claymodeling"==eventValue||"rangoli"==eventValue||"bestoutofwaste"==eventValue||"cosplay"==eventValue||"dressmeup"==eventValue||"modelmaking"==eventValue||"spellbee"==eventValue||"streetsoccer"==eventValue||"gullycricket"==eventValue||"firelesscooking"==eventValue||"saathihaathbadhana"==eventValue||"mindgames"==eventValue||"dealnodeal"==eventValue||"justaminute"==eventValue)
+{
+var amount=100;
+document.getElementById("eventCost").innerHTML ="</br>Event Registration Amount="+amount;
+ //window.location.href = "register1.php?payment=" + amount; 
+}
+if("roadies"==eventValue||"rangoli"==eventValue||"shortmovie"==eventValue)
+{
+ var amount=200;
+document.getElementById("eventCost").innerHTML ="</br>Event Registration Amount="+amount;
+//window.location.href = "register1.php?payment=" + amount; 
+}
+    if("lodo"==eventValue)
+{
+ var amount=50;
+document.getElementById("eventCost").innerHTML ="</br>Event Registration Amount="+amount;
+//window.location.href = "register1.php?payment=" + amount; 
+}
+    if("snooker"==eventValue||"hardware"==eventValue)
+{
+ var amount=300;
+document.getElementById("eventCost").innerHTML ="</br>Event Registration Amount="+amount;
+//window.location.href = "register1.php?payment=" + amount; 
+}
+     if("bandwar"==eventValue||"groupdance"==eventValue)
+{
+ var amount=500;
+document.getElementById("eventCost").innerHTML ="</br>Event Registration Amount="+amount;
+//window.location.href = "register1.php?payment=" + amount; 
+}
+     if("fashionshow"==eventValue)
+{
+ var amount=100+500;
+document.getElementById("eventCost").innerHTML ="</br>Event Registration Amount="+amount;
+//window.location.href = "register1.php?payment=" + amount; 
+}
+    if("mun"==eventValue)
+{
+ var amount=700;
+document.getElementById("eventCost").innerHTML ="</br>Event Registration Amount="+amount;
+//window.location.href = "register1.php?payment=" + amount; 
+}
+    if("python"==eventValue)
+{
+ var amount=600;
+document.getElementById("eventCost").innerHTML ="</br>Event Registration Amount="+amount;
+//window.location.href = "register1.php?payment=" + amount; 
+}
+    if("iot"==eventValue)
+        {
+ var amount=800;
+document.getElementById("eventCost").innerHTML ="</br>Event Registration Amount="+amount;
+//window.location.href = "register1.php?payment=" + amount; 
+}
+}
+function validateForm() {
+    var x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+var y = document.forms["myForm"]["email"].value;
+    if (y == "") {
+        alert("Email must be filled out");
+        return false;
+}
+}
+     function checklength(e)
+    {
+        if(e.value.length !=10)
+            {
+                alert('Please enter exactly 10 digits');
+            }
+        
+    }
+</script>
+  </body>
+</html>
